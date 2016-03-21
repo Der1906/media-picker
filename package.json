@@ -1,0 +1,30 @@
+{
+  "name": "media-picker",
+  "version": "1.0.0",
+  "description": "Javascript library to capture or pick images and or audio from your PC",
+  "scripts": {
+    "build": "browserify js/app.js > js/build.js -t [babelify --presets [es2015] ] && uglify -s js/build.js -o js/build.min.js && watchify js/app.js -o js/build.min.js -v -t [ babelify --presets [es2015] ]",
+    "start": "http-server -p 3000 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Der1906/media-picker.git"
+  },
+  "author": "Diego R.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Der1906/media-picker/issues"
+  },
+  "homepage": "https://github.com/Der1906/media-picker#readme",
+  "dependencies": {
+    "babel-cli": "^6.6.5",
+    "browserify": "^13.0.0",
+    "domready": "^1.0.8"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.2.0",
+    "uglify": "^0.1.5",
+    "watchify": "^3.7.0"
+  }
+}
